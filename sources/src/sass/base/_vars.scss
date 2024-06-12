@@ -1,0 +1,9 @@
+// fonts
+
+:root {
+    --font-family: "Roboto", sans-serif;
+    --second-family: "Roboto Condensed", sans-serif;
+}
+
+$font_main: var(--font-family, "Roboto", sans-serif);
+$font_second: var(--second-family, "Roboto Condensed", sans-serif);

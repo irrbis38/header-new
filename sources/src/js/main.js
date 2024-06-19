@@ -44,19 +44,48 @@ var initHeader = (header) => {
                 item.classList.remove("active");
                 item.children[1] && (item.children[1].style.maxHeight = null);
             });
+        } else {
+            hasdropdown_items.forEach((item) => {
+                item.classList.remove("active");
+                item.children[1] && (item.children[1].style.maxHeight = null);
+            });
+        }
+    });
+
+    hasdropdown_items.length > 0 &&
+        hasdropdown_items.forEach((item) => {
+            item.addEventListener("mouseover", () => {
+                if (window.innerWidth > 1000) {
+                    hasdropdown_items.forEach((i) => {
+                        i !== item && i.classList.remove("active");
+                    });
+                    item.classList.add("active");
+                }
+            });
+        });
+
+    window.addEventListener("click", (e) => {
+        if (window.innerWidth > 1000) {
+            var hasdropdown = e.target.closest(".nheader__hasdropdown");
+            !hasdropdown &&
+                hasdropdown_items.forEach((item) =>
+                    item.classList.remove("active")
+                );
         }
     });
 
     hasdropdown_items.forEach((item) => {
-        item.addEventListener("click", (e) => {
-            var isActive = item.classList.contains("active");
+        var heading = item.children[0];
+        var list = heading.nextElementSibling;
+        heading.addEventListener("click", (e) => {
+            var isActive = heading.classList.contains("active");
             if (window.innerWidth <= 1000) {
                 if (!isActive) {
-                    e.preventDefault();
-                    item.classList.add("active");
-                    item.children[1] &&
-                        (item.children[1].style.maxHeight =
-                            item.children[1].scrollHeight + "px");
+                    heading.classList.add("active");
+                    list && (list.style.maxHeight = list.scrollHeight + "px");
+                } else {
+                    heading.classList.remove("active");
+                    list && (list.style.maxHeight = null);
                 }
             }
         });
@@ -78,6 +107,5 @@ var initHeader = (header) => {
 
 document.addEventListener("DOMContentLoaded", () => {
     var header = document.querySelector(".nheader");
-
     header && initHeader(header);
 });

@@ -349,7 +349,7 @@ body.lock {
     z-index: 5;
     width: 100%;
     height: 100%;
-    min-height: 100vh;
+    min-height: 100dvh;
     background-color: #fff;
     transition: -webkit-transform .3s ease-in-out;
     transition: transform .3s ease-in-out;
@@ -384,7 +384,7 @@ body.lock {
     z-index: 2;
     width: 100%;
     height: 100%;
-    min-height: 100vh;
+    min-height: 100dvh;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -413,8 +413,8 @@ body.lock {
     display: block;
     position: absolute;
     bottom: 0;
-    left: 0;
-    width: 100%;
+    left: -44px;
+    right: -10px;
     z-index: -1;
     height: 325px;
     background: linear-gradient(180deg,#fff 0,#cdf4ff 17.01%,#7bd3f7 35.8%,#459bd5 66.35%,#365ea7 100%)
@@ -493,6 +493,7 @@ body.lock {
 }
 @media (max-width:1000px) {
   .nheader__menu {
+    position: relative;
     width: 100%;
     -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
@@ -739,6 +740,7 @@ body.lock {
 }
 @media (max-width:1000px) {
   .nheader__social {
+    position: relative;
     -webkit-flex: 0 0 30px;
     -ms-flex: 0 0 30px;
     flex: 0 0 30px;

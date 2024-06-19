@@ -1,1 +1,58 @@
-header.header
+header.nheader
+    .nheader__top
+        .nheader__container.nheader__container_top
+            .nheader__panel
+                a.nheader__logo_mobile(href="#")
+                    img(src="./images/logo-mobile.svg", alt="logo")
+                p.nheader__descr Программисты Битрикс и Yii2
+                .nheader__contacts
+                    a.nheader__email(href="mailto:info@phpdev.org") info@phpdev.org
+                    a.nheader__phone(href="tel:+79938984462") +7 993 898-44-62
+                    a.nheader__phone(href="tel:+375445034449") +375 44 503 4449
+            button.nheader__order_btn(button="button") Заказать звонок
+
+            button.nheader__burger(button="button" aria-label="Открыть мобильное меню"): span
+
+
+    .nheader__bottom
+        .nheader__container.nheader__container_bottom
+
+            .nheader__inner
+
+                .nheader__main
+                    .nheader__bg
+                    .nheader__wrapper
+                        .nheader__logo
+                            img(src="./images/logo.svg", alt="logo")
+
+                        p.nheader__title Меню
+                        nav.nheader__menu
+                            ul.nheader__list 
+                                li.nheader__hasdropdown
+                                    a(href="https://www.google.com/") Услуги
+                                    include ./_header_dropdown
+
+
+                                li.nheader__hasdropdown
+                                    a(href="https://www.google.com/") Аутсорсинг
+                                    include ./_header_dropdown
+
+
+                                li.nheader__hasdropdown
+                                    a(href="https://www.google.com/") Аутстаффинг
+                                    include ./_header_dropdown
+
+
+                                li: a(href="#") Кейсы
+                                li: a(href="#") Галерея
+                                li: a(href="#") О компании
+                                li: a(href="#") Блог
+                                li: a(href="#") Контакты
+                            .nheader__social 
+                                a(href="#" aria-label="Перейти на нашу страницу в инстаграм" target="_blank" rel="noopener noreferrer")
+                                    img(src="./images/instagram.svg", alt="instagram")
+                                a(href="#" aria-label="Перейти на нашу страницу в фейсбук" target="_blank" rel="noopener noreferrer")
+                                    img(src="./images/facebook.svg", alt="facebook")
+
+                .nheader__lang #[a.current(href="#") ru] | #[a(href="#") en]
+

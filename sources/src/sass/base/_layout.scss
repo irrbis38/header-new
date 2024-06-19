@@ -34,16 +34,16 @@ body {
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: var(--font_main);
+    // font-family: var(--font_main);
     // color: #000;
     // font-family: Arial, Helvetica, sans-serif;
     // font-weight: 400;
     // background-color: #fff;
 }
 
-// body.lock {
-//   overflow: hidden;
-// }
+body.lock {
+    overflow: hidden;
+}
 
 // .container {
 //   width: 100%;

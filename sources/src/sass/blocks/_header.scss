@@ -615,6 +615,11 @@
             padding-top: 0;
             padding-bottom: 0;
             font-size: 18px;
+
+            &.active::before,
+            &.active::after {
+                transform: translateY(-50%) scaleY(-1);
+            }
         }
     }
 
@@ -658,17 +663,59 @@
     &.nheader__dropdown_small {
         left: 50%;
         transform: translateX(-40%);
-        width: 400px;
-        padding-left: 80px;
-        padding-right: 80px;
+        // width: 250px;
+        width: max-content;
+        padding-left: 40px;
+        padding-right: 40px;
 
         ul {
             width: 100%;
         }
 
         @media (max-width: 1000px) {
+            width: 100%;
             transform: translateX(0);
             padding: 0 0 0 16px;
+        }
+    }
+
+    &.nheader__dropdown_wide {
+        li:first-child {
+            margin-bottom: 20px;
+
+            a {
+                position: relative;
+                display: inline-block;
+                font-family: "Roboto", sans-serif;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 130%;
+                color: #333;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 6px;
+                    left: -21px;
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 1px;
+                    background: #58a0dc;
+                }
+            }
+        }
+
+        @media (max-width: 1000px) {
+            li:first-child {
+                margin-bottom: 14px;
+
+                a {
+                    &::before {
+                        top: 7px;
+                        left: -16px;
+                    }
+                }
+            }
         }
     }
 
@@ -678,31 +725,6 @@
 
     li:not(:last-child) {
         margin-bottom: 9px;
-    }
-
-    li:first-child {
-        margin-bottom: 20px;
-
-        a {
-            position: relative;
-            display: inline-block;
-            font-family: "Roboto", sans-serif;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 130%;
-            color: #333;
-
-            &::before {
-                content: "";
-                position: absolute;
-                top: 6px;
-                left: -21px;
-                width: 6px;
-                height: 6px;
-                border-radius: 1px;
-                background: #58a0dc;
-            }
-        }
     }
 
     a {

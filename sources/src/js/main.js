@@ -46,7 +46,9 @@ var initHeader = (header) => {
             });
         } else {
             hasdropdown_items.forEach((item) => {
+                console.log("here");
                 item.classList.remove("active");
+                item.children[1].classList.remove("active");
                 item.children[1] && (item.children[1].style.maxHeight = null);
             });
         }

@@ -628,6 +628,11 @@ body.lock {
     padding-bottom: 0;
     font-size: 18px
   }
+  .nheader__hasdropdown > span.active::after,
+  .nheader__hasdropdown > span.active::before {
+    -webkit-transform: translateY(-50%) scaleY(-1);
+    transform: translateY(-50%) scaleY(-1)
+  }
 }
 .nheader__hasdropdown.nheader__hasdropdown_small {
   position: relative
@@ -664,30 +669,27 @@ body.lock {
   left: 50%;
   -webkit-transform: translateX(-40%);
   transform: translateX(-40%);
-  width: 400px;
-  padding-left: 80px;
-  padding-right: 80px
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding-left: 40px;
+  padding-right: 40px
 }
 .nheader__dropdown.nheader__dropdown_small ul {
   width: 100%
 }
 @media (max-width:1000px) {
   .nheader__dropdown.nheader__dropdown_small {
+    width: 100%;
     -webkit-transform: translateX(0);
     transform: translateX(0);
     padding: 0 0 0 16px
   }
 }
-.nheader__dropdown ul {
-  width: 23%
-}
-.nheader__dropdown li:not(:last-child) {
-  margin-bottom: 9px
-}
-.nheader__dropdown li:first-child {
+.nheader__dropdown.nheader__dropdown_wide li:first-child {
   margin-bottom: 20px
 }
-.nheader__dropdown li:first-child a {
+.nheader__dropdown.nheader__dropdown_wide li:first-child a {
   position: relative;
   display: inline-block;
   font-family: Roboto,sans-serif;
@@ -696,7 +698,7 @@ body.lock {
   line-height: 130%;
   color: #333
 }
-.nheader__dropdown li:first-child a::before {
+.nheader__dropdown.nheader__dropdown_wide li:first-child a::before {
   content: "";
   position: absolute;
   top: 6px;
@@ -705,6 +707,21 @@ body.lock {
   height: 6px;
   border-radius: 1px;
   background: #58a0dc
+}
+@media (max-width:1000px) {
+  .nheader__dropdown.nheader__dropdown_wide li:first-child {
+    margin-bottom: 14px
+  }
+  .nheader__dropdown.nheader__dropdown_wide li:first-child a::before {
+    top: 7px;
+    left: -16px
+  }
+}
+.nheader__dropdown ul {
+  width: 23%
+}
+.nheader__dropdown li:not(:last-child) {
+  margin-bottom: 9px
 }
 .nheader__dropdown a {
   padding: 0;

@@ -34,21 +34,20 @@ header.nheader
                                     include ./_header_dropdown
 
 
-                                li.nheader__hasdropdown
-                                    span Аутсорсинг
-                                    include ./_header_dropdown
-
-
-                                li.nheader__hasdropdown
+                                li.nheader__hasdropdown.nheader__hasdropdown_small
                                     span Аутстаффинг
-                                    include ./_header_dropdown
+                                    include ./_header_dropdown_outstaff
 
 
-                                li: a(href="#") Кейсы
-                                li: a(href="#") Галерея
+                                li.nheader__hasdropdown.nheader__hasdropdown_small
+                                    span Кейсы
+                                    include ./_header_dropdown_keys
+
+
                                 li: a(href="#") О компании
                                 li: a(href="#") Блог
                                 li: a(href="#") Контакты
+                                li: a(href="#") Галерея
                             .nheader__social
                                 
                                 a(href="#" aria-label="Перейти на нашу страницу в инстаграм" target="_blank" rel="noopener noreferrer")

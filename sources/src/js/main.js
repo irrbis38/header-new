@@ -82,6 +82,7 @@ var initHeader = (header) => {
         heading.addEventListener("click", (e) => {
             var isActive = heading.classList.contains("active");
             if (window.innerWidth <= 1000) {
+                e.preventDefault();
                 if (!isActive) {
                     heading.classList.add("active");
                     list && (list.style.maxHeight = list.scrollHeight + "px");

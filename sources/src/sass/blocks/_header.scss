@@ -515,7 +515,8 @@
         }
     }
 
-    span {
+    span,
+    .nheader__hasdropdown_small > a {
         @media (hover: hover) {
             &:hover {
                 color: #459bd5;
@@ -572,7 +573,8 @@
 }
 
 .nheader__hasdropdown {
-    & > span {
+    & > span,
+    & > a {
         display: inline-block;
         position: relative;
         padding-right: 15px;

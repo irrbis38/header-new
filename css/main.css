@@ -538,22 +538,29 @@ body.lock {
   }
 }
 @media (hover:hover) {
+  .nheader__list .nheader__hasdropdown_small > a:hover,
   .nheader__list span:hover {
     color: #459bd5
   }
+  .nheader__list .nheader__hasdropdown_small > a:hover::after,
+  .nheader__list .nheader__hasdropdown_small > a:hover::before,
   .nheader__list span:hover::after,
   .nheader__list span:hover::before {
     -webkit-transform: translateY(-50%) scaleY(-1);
     transform: translateY(-50%) scaleY(-1)
   }
+  .nheader__list .nheader__hasdropdown_small > a:hover::after,
   .nheader__list span:hover::after {
     opacity: 1
   }
+  .nheader__list .nheader__hasdropdown_small > a:hover::before,
   .nheader__list span:hover::before {
     opacity: 0
   }
 }
 @media (max-width:1000px) and (hover:hover) {
+  .nheader__list .nheader__hasdropdown_small > a:hover::after,
+  .nheader__list .nheader__hasdropdown_small > a:hover::before,
   .nheader__list span:hover::after,
   .nheader__list span:hover::before {
     -webkit-transform: translateY(-50%);
@@ -584,6 +591,7 @@ body.lock {
     font-size: 18px
   }
 }
+.nheader__hasdropdown > a,
 .nheader__hasdropdown > span {
   display: inline-block;
   position: relative;
@@ -593,10 +601,13 @@ body.lock {
   transition: color .2s ease-in-out
 }
 @media (hover:hover) {
+  .nheader__hasdropdown > a:hover,
   .nheader__hasdropdown > span:hover {
     color: #459bd5
   }
 }
+.nheader__hasdropdown > a::after,
+.nheader__hasdropdown > a::before,
 .nheader__hasdropdown > span::after,
 .nheader__hasdropdown > span::before {
   content: "";
@@ -615,19 +626,24 @@ body.lock {
   transition: opacity .2s ease-in-out,transform .2s ease-in-out;
   transition: opacity .2s ease-in-out,transform .2s ease-in-out,-webkit-transform .2s ease-in-out
 }
+.nheader__hasdropdown > a::before,
 .nheader__hasdropdown > span::before {
   background-image: url("data:image/svg+xml,%3Csvg width='8' height='5' viewBox='0 0 8 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.64645 4.35355C3.84171 4.54882 4.15829 4.54882 4.35355 4.35355L7.53553 1.17157C7.7308 0.976311 7.7308 0.659729 7.53553 0.464467C7.34027 0.269204 7.02369 0.269204 6.82843 0.464466L4 3.29289L1.17157 0.464466C0.976311 0.269204 0.659729 0.269203 0.464467 0.464466C0.269204 0.659728 0.269204 0.97631 0.464466 1.17157L3.64645 4.35355ZM4.5 4L4.5 3.9999L3.5 3.9999L3.5 4L4.5 4Z' fill='%234F4F4F' /%3E%3C/svg%3E")
 }
+.nheader__hasdropdown > a::after,
 .nheader__hasdropdown > span::after {
   opacity: 0;
   background-image: url("data:image/svg+xml,%3Csvg width='8' height='5' viewBox='0 0 8 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.64645 4.35355C3.84171 4.54882 4.15829 4.54882 4.35355 4.35355L7.53553 1.17157C7.7308 0.976311 7.7308 0.659729 7.53553 0.464467C7.34027 0.269204 7.02369 0.269204 6.82843 0.464466L4 3.29289L1.17157 0.464466C0.976311 0.269204 0.659729 0.269203 0.464467 0.464466C0.269204 0.659728 0.269204 0.97631 0.464466 1.17157L3.64645 4.35355ZM4.5 4L4.5 3.9999L3.5 3.9999L3.5 4L4.5 4Z' fill='%234272b8' /%3E%3C/svg%3E")
 }
 @media (max-width:1000px) {
+  .nheader__hasdropdown > a,
   .nheader__hasdropdown > span {
     padding-top: 0;
     padding-bottom: 0;
     font-size: 18px
   }
+  .nheader__hasdropdown > a.active::after,
+  .nheader__hasdropdown > a.active::before,
   .nheader__hasdropdown > span.active::after,
   .nheader__hasdropdown > span.active::before {
     -webkit-transform: translateY(-50%) scaleY(-1);
